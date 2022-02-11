@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiRestChallenge.Abstractions\ApiRestChallenge.Abstractions.csproj" />
+    <ProjectReference Include="..\ApiRestChallenge.DataAccess\ApiRestChallenge.DataAccess.csproj" />
+    <ProjectReference Include="..\ApiRestChallenge.Entities\ApiRestChallenge.Entities.csproj" />
+    <ProjectReference Include="..\ApiRestChallenge.Services\ApiRestChallenge.Services.csproj" />
+  </ItemGroup>
+
+</Project>
