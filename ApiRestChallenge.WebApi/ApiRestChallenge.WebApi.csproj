@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,9 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ApiRestChallenge.Application\ApiRestChallenge.Application.csproj" />
+    <ProjectReference Include="..\ApiRestChallenge.Application\ApiRestChallenge.App.csproj" />
     <ProjectReference Include="..\ApiRestChallenge.Entities\ApiRestChallenge.Entities.csproj" />
     <ProjectReference Include="..\ApiRestChallenge.Services\ApiRestChallenge.Services.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 </Project>

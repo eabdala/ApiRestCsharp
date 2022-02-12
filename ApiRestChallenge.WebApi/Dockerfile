@@ -7,6 +7,12 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["ApiRestChallenge.WebApi/ApiRestChallenge.WebApi.csproj", "ApiRestChallenge.WebApi/"]
+COPY ["ApiRestChallenge.Services/ApiRestChallenge.Services.csproj", "ApiRestChallenge.Services/"]
+COPY ["ApiRestChallenge.Abstractions/ApiRestChallenge.Abstractions.csproj", "ApiRestChallenge.Abstractions/"]
+COPY ["ApiRestChallenge.Application/ApiRestChallenge.Application.csproj", "ApiRestChallenge.Application/"]
+COPY ["ApiRestChallenge.Repository/ApiRestChallenge.Repository.csproj", "ApiRestChallenge.Repository/"]
+COPY ["ApiRestChallenge.DataAccess/ApiRestChallenge.DataAccess.csproj", "ApiRestChallenge.DataAccess/"]
+COPY ["ApiRestChallenge.Entities/ApiRestChallenge.Entities.csproj", "ApiRestChallenge.Entities/"]
 RUN dotnet restore "ApiRestChallenge.WebApi/ApiRestChallenge.WebApi.csproj"
 COPY . .
 WORKDIR "/src/ApiRestChallenge.WebApi"

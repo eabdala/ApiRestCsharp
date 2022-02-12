@@ -10,9 +10,12 @@ using ApiRestChallenge.Entities;
 using ApiRestChallenge.Application;
 using ApiRestChallenge.WebApi.DTOs;
 using System.Security.Cryptography;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiRestChallenge.WebApi.Controllers
 {
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
